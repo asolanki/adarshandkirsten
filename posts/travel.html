@@ -12,7 +12,7 @@ Description: Beginning of a new chapter
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- POST TITLE -->
   <title>
-    Post Template
+    Time to travel!  Leaving Seattle
   </title>
 
   <!-- POST META -->
@@ -23,6 +23,8 @@ Description: Beginning of a new chapter
   <link rel="stylesheet" href="../css/pico.min.css">
   <link rel="stylesheet" href="../css/styles.css">
   <link rel="icon" type="image/png" href="../img/favicon.png">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
 </head>
 
 <body>
@@ -35,8 +37,8 @@ Description: Beginning of a new chapter
 
       <ul>
         <li><a href="posts.html" class="secondary"><small>Blog</small></a></li>
-        <li><a href="https://withjoy.com/adarsh-and-kirsten" class="secondary"><small>Wedding</small></a></li>        
-         <li><a href="#" id="toggle-dark" data-tooltip="Toggle Dark"><svg width="18" height="18" viewBox="0 4 24 18"
+        <li><a href="https://withjoy.com/adarsh-and-kirsten" class="secondary"><small>Wedding</small></a></li>
+        <li><a href="#" id="toggle-dark" data-tooltip="Toggle Dark"><svg width="18" height="18" viewBox="0 4 24 18"
               preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" clip-rule="evenodd"
                 d="M12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16ZM12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18Z"
@@ -56,7 +58,7 @@ Description: Beginning of a new chapter
             <a href="../posts.html">All Posts</a>
           </li>
           <li>
-            POST TITLE
+            Time to travel
           </li>
         </ul>
       </small>
@@ -65,13 +67,23 @@ Description: Beginning of a new chapter
     <!-- POST CONTENT -->
     <div id="post-content">
 
-      <!-- hero image -->
-      <div class="center">
-        <img src=""  alt="" >
-      </div>
-
       <!-- POST TITLE -->
-      <h3></h3>
+      <h3>Time to travel!</h3>
+
+      <a data-fancybox="gallery" data-src="../img/full/IMG_7839.jpg" 
+        data-caption="Saying goodbye to our lovely apartment view">
+        <img src="../img/thumb/IMG_7839_thumb.jpg" />
+      </a>
+
+      <a data-fancybox="gallery" data-src="../img/full/IMG_7832.jpg" 
+        data-caption="Packing up the rental van!">
+        <img src="../img/thumb/IMG_7832_thumb.jpg" />
+      </a>
+
+      <a data-fancybox="gallery" data-src="../img/full/IMG_8079.jpg" 
+        data-caption="All packed up!">
+        <img src="../img/thumb/IMG_8079_thumb.jpg" />
+      </a>
 
       <p></p>
 
@@ -100,7 +112,12 @@ Description: Beginning of a new chapter
   </footer>
 </body>
 
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+
 <script>
+  Fancybox.bind('[data-fancybox]', {
+  });
+
   // toggle dark mode
   document.getElementById('toggle-dark').addEventListener('click', function () {
     var currentTheme = document.documentElement.getAttribute('data-theme');
@@ -111,4 +128,5 @@ Description: Beginning of a new chapter
     }
   });
 </script>
+
 </html>
