@@ -1,9 +1,15 @@
-# first convert HEICS: 
-# for file in *.HEIC; do ffmpeg -i "$file" "${file%.HEIC}.jpg"; done
+##
+# To run, invoke with cmd-line param of folder name 
+#  expected to be located at (img/raw/{folder})
+# Script will create /thumb and /full for each image
+##
 
 import os
+import sys
 from PIL import Image
 from pillow_heif import register_heif_opener
+import argparse
+
 register_heif_opener()
 
 def process_images(input_dir, output_dir, thumbnail_dir):
@@ -25,8 +31,6 @@ def process_images(input_dir, output_dir, thumbnail_dir):
         # Open the image file
         with Image.open(os.path.join(input_dir, filename)) as img:
             # Convert to JPEG
-            jpeg_filename = os.path.splitext(filename)[0] + '.jpg'
-            jpeg_filepath = os.path.join(output_dir, jpeg_filename)
             img.convert('RGB').save(jpeg_filepath)
             print(f'Saved {jpeg_filepath}')
 
@@ -58,10 +62,21 @@ def create_thumbnail(img, thumbnail_filepath):
     os.makedirs(os.path.dirname(thumbnail_filepath), exist_ok=True)
     img_thumbnail.save(thumbnail_filepath)
     print(f'Saved thumbnail {thumbnail_filepath}')
+def main(folder_name):
+    # Directories
+    input_dir = f'img/raw/{folder_name}'
+    output_dir = f'img/full/{folder_name}'
+    thumbnail_dir = f'img/thumb/{folder_name}'
 
-# Directories
-input_dir = 'img/raw'
-output_dir = 'img/full'
-thumbnail_dir = 'img/thumb'
+    # Ensure output directories exist
+    os.makedirs(output_dir, exist_ok=True)
+    os.makedirs(thumbnail_dir, exist_ok=True)
 
-process_images(input_dir, output_dir, thumbnail_dir)
+    process_images(input_dir, output_dir, thumbnail_dir)
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description='Process images in a specified folder.')
+    parser.add_argument('folder_name', help='Name of the folder within img/raw to process.')
+    args = parser.parse_args()
+
+    main(args.folder_name)

@@ -1,0 +1,44 @@
+- type: images
+  title: "Leaving Seattle!"
+  date: "2023-09-05"
+  description: "Beginning of a new chapter"
+  filename: seattle.html
+  folder: seattle
+  images:
+    - fullsize: img/full/IMG_7839.jpg
+      thumbnail: img/thumb/IMG_7839_thumb.jpg
+      caption: "Saying goodbye to our lovely apartment view"
+    - fullsize: img/full/IMG_7832.jpg
+      thumbnail: img/thumb/IMG_7832_thumb.jpg
+      caption: "Packing up the rental van!"
+    - fullsize: img/full/IMG_8079.jpg
+      thumbnail: img/thumb/IMG_8079_thumb.jpg
+      caption: "All packed up!"
+
+- type: images
+  title: "San Francisco and our flight to Singapore"
+  date: "2023-10-09"
+  description: "San Francisco pit stop and then SFO -> Singapore"
+  filename: sf.html
+  folder: sf
+  images:
+    - img_name: sf2
+      caption: "Next, we got some gf treats at Third Culture Bakery! Mochi muffins!"
+    - img_name: sf3
+      caption: "An excellent dinner at Camino Alto"
+    - img_name: sf4
+      caption: "Dinner"
+    - img_name: sf5
+      caption: "Dinner"
+    - img_name: sf6
+      caption: "United Polaris Lounge"
+    - img_name: sf7
+      caption: "United Polaris Lounge"
+    - img_name: sf8
+      caption: "Seated in our lovely seats!"
+    - img_name: sf9
+      caption: "Ready for dinner"
+    - img_name: sf10
+      caption: "Gluten free bread!"
+    - img_name: sf11
+      caption: "Veg Indian food - Kaddu, dal, rice"
