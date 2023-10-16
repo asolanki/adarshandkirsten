@@ -1,5 +1,6 @@
 import os
 import yaml
+import json
 from jinja2 import Template
 
 ##
@@ -80,3 +81,9 @@ if current_posts:
 # If all posts are synced
 if all_synced:
     print('OK: All posts synced')
+
+# create new json for JS parsing by front-end
+with open('posts.json', 'w') as json_file:
+    json.dump(posts, json_file, ensure_ascii=False, indent=4)
+
+print("posts.json has been updated")
