@@ -36,35 +36,34 @@ for post in posts:
     if filename not in current_posts:
         print(f'Creating file: {filename}')
         with open(os.path.join(post_dir, filename), 'w') as file:
-            if post['type'] == 'text':
-                print(f'Type = text')
-                rendered_html = template.render(
-                    title=post['title'],
-                    date=post['date'],
-                    description=post['description'],
-                    content_type='text',
-                    content=None,
-                    images=None
-                )
-            elif post['type'] == 'images':
-                print(f'Type = images')
-                processed_images = [{
-                    'fullsize': f'../img/full/{post["folder"]}/{img["img_name"]}.jpg',
-                    'thumbnail': f'../img/thumb/{post["folder"]}/{img["img_name"]}_thumb.jpg',
-                        'caption': img['caption']
-                    } for img in post['images']]
+            processed_content = []
+            for item in post['media']:
+                if item['type'] == 'image':
+                    processed_content.append({
+                        'type': 'image',
+                        'fullsize': f'../img/full/{post["folder"]}/{item["img_name"]}.jpg',
+                        'thumbnail': f'../img/thumb/{post["folder"]}/{item["img_name"]}_thumb.jpg',
+                        'caption': item['caption']
+                    })
+                elif item['type'] == 'video':
+                    processed_content.append({
+                        'type': 'video',
+                        'fullsize': f'../img/full/{post["folder"]}/{item["video_name"]}.mp4',
+                        'thumbnail': f'../img/thumb/{post["folder"]}/{item["video_name"]}_thumb.jpg',
+                        'caption': item['caption']
+                    })
+                elif item['type'] == 'text':
+                    processed_content.append({
+                        'type': 'text',
+                        'content': item['content']
+                    })
 
-                rendered_html = template.render(
-                    title=post['title'],
-                    date=post['date'],
-                    description=post['description'],
-                    content_type='images',
-                    content=None,
-                    images=processed_images
-                )
-            else:
-                print(f'Error: Unknown post type for {filename}')
-                continue
+            rendered_html = template.render(
+                title=post['title'],
+                date=post['date'],
+                description=post['description'],
+                content=processed_content
+            )
             file.write(rendered_html)
             print(f'Created file {filename}')
         all_synced = False

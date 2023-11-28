@@ -59,19 +59,22 @@
 
       <div id="post-content">
         <h3>{{ title }}</h3>
-
         <p>{{ description }}</p>
-
-        {% if content_type == 'images' %}
-        {% for image in images %}
-        <a
-          data-fancybox="gallery"
-          data-src="{{ image.fullsize }}"
-          data-caption="{{ image.caption }}"
-        >
-          <img src="{{ image.thumbnail }}" />
-        </a>
-        {% endfor %} {% endif %}
+    
+        {% for item in content %}
+            {% if item.type == 'text' %}
+                <p>{{ item.content }}</p>
+            {% elif item.type == 'image' %}
+                <a data-fancybox="gallery" data-src="{{ item.fullsize }}" data-caption="{{ item.caption }}">
+                    <img src="{{ item.thumbnail }}" />
+                </a>
+            {% elif item.type == 'video' %}
+            <a href="{{ item.fullsize }}" data-fancybox data-width="640" data-height="360">
+              <img src="{{ item.thumbnail }}" /> 
+            </a>
+            <p>{{ item.caption }}</p>
+        {% endif %}
+    {% endfor %}
 
         <p></p>
 
