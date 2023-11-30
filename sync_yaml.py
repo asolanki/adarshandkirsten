@@ -39,17 +39,19 @@ for post in posts:
             processed_content = []
             for item in post['media']:
                 if item['type'] == 'image':
+                    base_name, ext = os.path.splitext(item['img_name'])
                     processed_content.append({
                         'type': 'image',
-                        'fullsize': f'../img/full/{post["folder"]}/{item["img_name"]}.jpg',
-                        'thumbnail': f'../img/thumb/{post["folder"]}/{item["img_name"]}_thumb.jpg',
+                        'fullsize': f'../img/full/{post["folder"]}/{base_name}{ext}',
+                        'thumbnail': f'../img/thumb/{post["folder"]}/{base_name}_thumb{ext}',
                         'caption': item['caption']
                     })
                 elif item['type'] == 'video':
+                    base_name, ext = os.path.splitext(item['video_name'])
                     processed_content.append({
                         'type': 'video',
-                        'fullsize': f'../img/full/{post["folder"]}/{item["video_name"]}.mp4',
-                        'thumbnail': f'../img/thumb/{post["folder"]}/{item["video_name"]}_thumb.jpg',
+                        'fullsize': f'../img/full/{post["folder"]}/{base_name}.mp4',
+                        'thumbnail': f'../img/thumb/{post["folder"]}/{base_name}_thumb.jpg',
                         'caption': item['caption']
                     })
                 elif item['type'] == 'text':
