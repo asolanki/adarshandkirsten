@@ -1,0 +1,11 @@
+services:
+  blog:
+    build: .
+    ports:
+      - "9240:9240"
+    volumes:
+      - ./app/admin:/app/admin
+      - ./app/data:/app/data
+      - ./app/frontend/img:/app/frontend/img
+    environment:
+      - ENVIRONMENT=development
