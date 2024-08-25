@@ -6,23 +6,23 @@
         "description": "Beginning of a new chapter",
         "filename": "seattle.html",
         "folder": "seattle",
-        "media": [
+        "content": [
             {
                 "type": "image",
-                "fullsize": "static/img/full/IMG_7839.jpg",
-                "thumbnail": "static/img/thumb/IMG_7839_thumb.jpg",
+                "fullsize": "/static/img/full/IMG_7839.jpg",
+                "thumbnail": "/static/img/thumb/IMG_7839_thumb.jpg",
                 "caption": "Saying goodbye to our lovely apartment view"
             },
             {
                 "type": "image",
-                "fullsize": "static/img/full/IMG_7832.jpg",
-                "thumbnail": "static/img/thumb/IMG_7832_thumb.jpg",
+                "fullsize": "/static/img/full/IMG_7832.jpg",
+                "thumbnail": "/static/img/thumb/IMG_7832_thumb.jpg",
                 "caption": "Packing up the rental van!"
             },
             {
                 "type": "image",
-                "fullsize": "static/img/full/IMG_8079.jpg",
-                "thumbnail": "static/img/thumb/IMG_8079_thumb.jpg",
+                "fullsize": "/static/img/full/IMG_8079.jpg",
+                "thumbnail": "/static/img/thumb/IMG_8079_thumb.jpg",
                 "caption": "All packed up!"
             }
         ]
@@ -34,7 +34,7 @@
         "description": "San Francisco pit stop and then SFO -> Singapore",
         "filename": "sf.html",
         "folder": "sf",
-        "media": [
+        "content": [
             {
                 "type": "text",
                 "content": "We started our journey flying to San Francisco on Saturday, enjoying a few days before our flight to Singapore."
@@ -45,8 +45,8 @@
             },
             {
                 "type": "image",
-                "fullsize": "static/img/full/sf/sf2.jpg",
-                "thumbnail": "static/img/thumb/sf/sf2_thumb.jpg",
+                "fullsize": "/static/img/full/sf/sf2.jpg",
+                "thumbnail": "/static/img/thumb/sf/sf2_thumb.jpg",
                 "caption": "Next, we got some gf treats at Third Culture Bakery! Mochi muffins!"
             },
             {
@@ -55,20 +55,20 @@
             },
             {
                 "type": "image",
-                "fullsize": "static/img/full/sf/sf3.jpg",
-                "thumbnail": "static/img/thumb/sf/sf3_thumb.jpg",
+                "fullsize": "/static/img/full/sf/sf3.jpg",
+                "thumbnail": "/static/img/thumb/sf/sf3_thumb.jpg",
                 "caption": "An excellent dinner at Camino Alto"
             },
             {
                 "type": "image",
-                "fullsize": "static/img/full/sf/sf4.jpg",
-                "thumbnail": "static/img/thumb/sf/sf4_thumb.jpg",
+                "fullsize": "/static/img/full/sf/sf4.jpg",
+                "thumbnail": "/static/img/thumb/sf/sf4_thumb.jpg",
                 "caption": "Dinner"
             },
             {
                 "type": "image",
-                "fullsize": "static/img/full/sf/sf5.jpg",
-                "thumbnail": "static/img/thumb/sf/sf5_thumb.jpg",
+                "fullsize": "/static/img/full/sf/sf5.jpg",
+                "thumbnail": "/static/img/thumb/sf/sf5_thumb.jpg",
                 "caption": "Dinner"
             },
             {
@@ -77,14 +77,14 @@
             },
             {
                 "type": "image",
-                "fullsize": "static/img/full/sf/sf6.jpg",
-                "thumbnail": "static/img/thumb/sf/sf6_thumb.jpg",
+                "fullsize": "/static/img/full/sf/sf6.jpg",
+                "thumbnail": "/static/img/thumb/sf/sf6_thumb.jpg",
                 "caption": "United Polaris Lounge"
             },
             {
                 "type": "image",
-                "fullsize": "static/img/full/sf/sf7.jpg",
-                "thumbnail": "static/img/thumb/sf/sf7_thumb.jpg",
+                "fullsize": "/static/img/full/sf/sf7.jpg",
+                "thumbnail": "/static/img/thumb/sf/sf7_thumb.jpg",
                 "caption": "United Polaris Lounge"
             },
             {
@@ -93,26 +93,26 @@
             },
             {
                 "type": "image",
-                "fullsize": "static/img/full/sf/sf8.jpg",
-                "thumbnail": "static/img/thumb/sf/sf8_thumb.jpg",
+                "fullsize": "/static/img/full/sf/sf8.jpg",
+                "thumbnail": "/static/img/thumb/sf/sf8_thumb.jpg",
                 "caption": "Seated in our lovely seats!"
             },
             {
                 "type": "image",
-                "fullsize": "static/img/full/sf/sf9.jpg",
-                "thumbnail": "static/img/thumb/sf/sf9_thumb.jpg",
+                "fullsize": "/static/img/full/sf/sf9.jpg",
+                "thumbnail": "/static/img/thumb/sf/sf9_thumb.jpg",
                 "caption": "Ready for dinner"
             },
             {
                 "type": "image",
-                "fullsize": "static/img/full/sf/sf10.jpg",
-                "thumbnail": "static/img/thumb/sf/sf10_thumb.jpg",
+                "fullsize": "/static/img/full/sf/sf10.jpg",
+                "thumbnail": "/static/img/thumb/sf/sf10_thumb.jpg",
                 "caption": "Gluten free bread!"
             },
             {
                 "type": "image",
-                "fullsize": "static/img/full/sf/sf11.jpg",
-                "thumbnail": "static/img/thumb/sf/sf11_thumb.jpg",
+                "fullsize": "/static/img/full/sf/sf11.jpg",
+                "thumbnail": "/static/img/thumb/sf/sf11_thumb.jpg",
                 "caption": "Veg Indian food - Kaddu, dal, rice"
             }
         ]
@@ -124,21 +124,21 @@
         "description": "Made it to Asia - time to enjoy Singapore",
         "filename": "singapore.html",
         "folder": "singapore",
-        "media": [
+        "content": [
             {
                 "type": "text",
                 "content": "We finally landed after 16 hours at around 5AM Singapore time, arriving in the lovely Changi Airport."
             },
             {
                 "type": "image",
-                "fullsize": "static/img/full/singapore/singapore1.jpg",
-                "thumbnail": "static/img/thumb/singapore/singapore1_thumb.jpg",
+                "fullsize": "/static/img/full/singapore/singapore1.jpg",
+                "thumbnail": "/static/img/thumb/singapore/singapore1_thumb.jpg",
                 "caption": "Us looking tired after 16 hours of flight time from San Francisco"
             },
             {
                 "type": "image",
-                "fullsize": "static/img/full/singapore/singapore2.jpg",
-                "thumbnail": "static/img/thumb/singapore/singapore2_thumb.jpg",
+                "fullsize": "/static/img/full/singapore/singapore2.jpg",
+                "thumbnail": "/static/img/thumb/singapore/singapore2_thumb.jpg",
                 "caption": "Kirsten walking around the airport - finally in Asia!"
             },
             {
@@ -147,14 +147,14 @@
             },
             {
                 "type": "image",
-                "fullsize": "static/img/full/singapore/singapore3.jpg",
-                "thumbnail": "static/img/thumb/singapore/singapore3_thumb.jpg",
+                "fullsize": "/static/img/full/singapore/singapore3.jpg",
+                "thumbnail": "/static/img/thumb/singapore/singapore3_thumb.jpg",
                 "caption": "Views from the cabana"
             },
             {
                 "type": "image",
-                "fullsize": "static/img/full/singapore/singapore4.jpg",
-                "thumbnail": "static/img/thumb/singapore/singapore4_thumb.jpg",
+                "fullsize": "/static/img/full/singapore/singapore4.jpg",
+                "thumbnail": "/static/img/thumb/singapore/singapore4_thumb.jpg",
                 "caption": "View of Singapore from the pool"
             },
             {
@@ -163,38 +163,38 @@
             },
             {
                 "type": "image",
-                "fullsize": "static/img/full/singapore/singapore5.jpg",
-                "thumbnail": "static/img/thumb/singapore/singapore5_thumb.jpg",
+                "fullsize": "/static/img/full/singapore/singapore5.jpg",
+                "thumbnail": "/static/img/thumb/singapore/singapore5_thumb.jpg",
                 "caption": "Dosas at MTR - one of our favorites in Little India"
             },
             {
                 "type": "image",
-                "fullsize": "static/img/full/singapore/singapore6.jpg",
-                "thumbnail": "static/img/thumb/singapore/singapore6_thumb.jpg",
+                "fullsize": "/static/img/full/singapore/singapore6.jpg",
+                "thumbnail": "/static/img/thumb/singapore/singapore6_thumb.jpg",
                 "caption": "One of many amazing hawker meals, featuring Hainanese Chicken Rice"
             },
             {
                 "type": "image",
-                "fullsize": "static/img/full/singapore/singapore7.jpg",
-                "thumbnail": "static/img/thumb/singapore/singapore7_thumb.jpg",
+                "fullsize": "/static/img/full/singapore/singapore7.jpg",
+                "thumbnail": "/static/img/thumb/singapore/singapore7_thumb.jpg",
                 "caption": "Enjoying some \"fish ball\" soup :)"
             },
             {
                 "type": "image",
-                "fullsize": "static/img/full/singapore/singapore8.jpg",
-                "thumbnail": "static/img/thumb/singapore/singapore8_thumb.jpg",
+                "fullsize": "/static/img/full/singapore/singapore8.jpg",
+                "thumbnail": "/static/img/thumb/singapore/singapore8_thumb.jpg",
                 "caption": "Sometimes you just have to get McDonald's fries!"
             },
             {
                 "type": "image",
-                "fullsize": "static/img/full/singapore/singapore10.jpg",
-                "thumbnail": "static/img/thumb/singapore/singapore10_thumb.jpg",
+                "fullsize": "/static/img/full/singapore/singapore10.jpg",
+                "thumbnail": "/static/img/thumb/singapore/singapore10_thumb.jpg",
                 "caption": "Biryani and Chee Cheong Fun (rice paper wraps)"
             },
             {
                 "type": "image",
-                "fullsize": "static/img/full/singapore/singapore11.jpg",
-                "thumbnail": "static/img/thumb/singapore/singapore11_thumb.jpg",
+                "fullsize": "/static/img/full/singapore/singapore11.jpg",
+                "thumbnail": "/static/img/thumb/singapore/singapore11_thumb.jpg",
                 "caption": "One of our most memorable meals, a fully vegetarian buffet-style \"pay what you want\" Indian restaurant called Annalakshmi"
             },
             {
@@ -203,14 +203,14 @@
             },
             {
                 "type": "image",
-                "fullsize": "static/img/full/singapore/singapore12.jpg",
-                "thumbnail": "static/img/thumb/singapore/singapore12_thumb.jpg",
+                "fullsize": "/static/img/full/singapore/singapore12.jpg",
+                "thumbnail": "/static/img/thumb/singapore/singapore12_thumb.jpg",
                 "caption": "Meeting with Rajesh, an old co-worker from Microsoft, and visit the Google Singapore office!"
             },
             {
                 "type": "image",
-                "fullsize": "static/img/full/singapore/singapore13.jpg",
-                "thumbnail": "static/img/thumb/singapore/singapore13_thumb.jpg",
+                "fullsize": "/static/img/full/singapore/singapore13.jpg",
+                "thumbnail": "/static/img/thumb/singapore/singapore13_thumb.jpg",
                 "caption": "A photo-op from the Google Singapore office"
             },
             {
@@ -219,26 +219,26 @@
             },
             {
                 "type": "image",
-                "fullsize": "static/img/full/singapore/singapore14.jpg",
-                "thumbnail": "static/img/thumb/singapore/singapore14_thumb.jpg",
+                "fullsize": "/static/img/full/singapore/singapore14.jpg",
+                "thumbnail": "/static/img/thumb/singapore/singapore14_thumb.jpg",
                 "caption": "Lovely walk along the Alexandra Canal"
             },
             {
                 "type": "image",
-                "fullsize": "static/img/full/singapore/singapore15.jpg",
-                "thumbnail": "static/img/thumb/singapore/singapore15_thumb.jpg",
+                "fullsize": "/static/img/full/singapore/singapore15.jpg",
+                "thumbnail": "/static/img/thumb/singapore/singapore15_thumb.jpg",
                 "caption": "Casual outdoor eliptical!"
             },
             {
                 "type": "video",
-                "fullsize": "static/img/full/singapore/singapore16.jpg",
-                "thumbnail": "static/img/thumb/singapore/singapore16_thumb.jpg",
+                "fullsize": "/static/img/full/singapore/singapore16.jpg",
+                "thumbnail": "/static/img/thumb/singapore/singapore16_thumb.jpg",
                 "caption": "Perforning some twists and turns at the gym"
             },
             {
                 "type": "video",
-                "fullsize": "static/img/full/singapore/singapore17.jpg",
-                "thumbnail": "static/img/thumb/singapore/singapore17_thumb.jpg",
+                "fullsize": "/static/img/full/singapore/singapore17.jpg",
+                "thumbnail": "/static/img/thumb/singapore/singapore17_thumb.jpg",
                 "caption": "Pull-ups / lat-pull downs!"
             },
             {

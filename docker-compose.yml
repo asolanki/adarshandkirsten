@@ -1,11 +1,40 @@
 services:
-  blog:
-    build: .
+  ghost:
+    image: ghost:5.90.0
+    restart: always
     ports:
-      - "9240:9240"
-    volumes:
-      - ./app/admin:/app/admin
-      - ./app/data:/app/data
-      - ./app/frontend/img:/app/frontend/img
+      - 2368:2368
     environment:
-      - ENVIRONMENT=development
+      # See https://ghost.org/docs/config/#configuration-options
+      database__client: mysql
+      database__connection__host: db
+      database__connection__user: root
+      database__connection__password: ${DB_PASSWORD}
+      database__connection__database: ghost
+      # This url value is just an example, and is likely to be different in your case.
+      url: http://localhost:2368
+      # contrary to the default mentioned in the linked documentation, this was set to true instead of false for the container to start properly.
+      NODE_ENV: development
+    volumes:
+      - ./content:/var/lib/ghost/content
+    depends_on:
+      db:
+        condition: service_healthy
+
+  db:
+    image: mysql:8.0
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
+      MYSQL_DATABASE: ghost
+    volumes:
+      - ./mysql:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  ghost-content:
+  mysql-data:

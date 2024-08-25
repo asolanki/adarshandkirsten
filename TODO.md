@@ -1,49 +1,57 @@
-Revised Implementation Plan:
+Migrating to Ghost CMS
 
-1. Data Storage:
-   - [x] Fully migrate to JSON for data storage
-   - [x] Remove YAML file and update all references to use JSON
-   - [ ] Modify sync_posts.py to work exclusively with JSON, removing sync_yaml.py
+1. Set up Ghost:
+   - [ ] Install Docker if not already installed
+   - [ ] Create a new directory for Ghost
+   - [ ] Create a docker-compose.yml file for Ghost
+   - [ ] Configure environment variables (database, email, etc.)
+   - [ ] Start Ghost container
 
-2. Admin Interface:
-   - [x] Set up a simple dockerized FastAPI backend for the admin interface
-   - [x] Create basic structure for adding/editing posts
-   - [ ] Expose at adarshandkirsten.com/admin
-   - [ ] Implement basic authentication (username/password) (hard coded in backend for now)
-   - [ ] Enhance user-friendly form for adding/editing posts:
-     - [x] Allow inline image insertion with captions
-     - [x] Support text content sections
-     - [x] Implement drag-and-drop functionality for image uploads
-   - [ ] Add a simple WYSIWYG editor for post content
-   - [x] Implement functionality to update the JSON file based on form submissions
-   - [ ] Create a post preview feature
+2. Initial Ghost Configuration:
+   - [ ] Access Ghost admin panel
+   - [ ] Create admin account
+   - [ ] Configure basic site settings
 
-3. Image Handling:
-   - [x] Integrate existing image processing functionality into the backend
-   - [x] Process images after post submission (for new posts)
-   - [x] Handle processing of new/changed media during post editing
-   - [x] Support multiple image uploads per post
+3. Data Migration:
+   - [ ] Create a Ghost JSON import file from existing posts.json
+   - [ ] Write a Python script to convert posts.json to Ghost format
+   - [ ] Import converted data into Ghost
 
-4. Post Rendering:
-   - [ ] Create a simple, clean HTML template for posts (replacing post_template.html)
-   - [ ] Implement a modal image viewer with carousel and captions
-   - [ ] Display large thumbnails in the post, with full-size images in the modal
+4. Content Transfer:
+   - [ ] Move existing images to Ghost content directory
+   - [ ] Update image references in imported posts
 
-5. Frontend Improvements:
-   - [ ] Develop CSS to improve the look and feel of posts
+5. Theme Development:
+   - [ ] Create a custom Ghost theme or modify an existing one
+   - [ ] Implement desired layout and styling
    - [ ] Ensure responsive design for mobile devices
-   - [ ] Implement lazy loading for images
 
-6. Deployment:
-   - [ ] Set up a simple Git-based deployment workflow to update Cloudflare Pages
-   - [ ] Automate the process of pushing updates to GitHub when changes are made through the admin interface
+6. Additional Features:
+   - [ ] Set up Ghost members and subscriptions (if needed)
+   - [ ] Configure SEO settings
+   - [ ] Set up RSS feed
 
-7. Documentation:
-   - [ ] Create brief user guide for your wife on how to use the admin interface
+7. Testing:
+   - [ ] Verify all posts and images are correctly imported
+   - [ ] Test responsiveness and functionality across devices
+   - [ ] Check performance and optimize if necessary
 
-8. Backup:
-   - [ ] Implement a simple backup system for the JSON file and images
+8. Deployment:
+   - [ ] Set up a reverse proxy (e.g., Nginx) for Ghost
+   - [ ] Configure SSL/TLS for secure connections
+   - [ ] Update DNS settings to point to new Ghost instance
 
-9. Security:
-   - [ ] Ensure HTTPS is used for the admin interface
-   - [ ] Set up proper file permissions on the VPS
+9. Post-Migration Tasks:
+   - [ ] Set up regular backups for Ghost data and content
+   - [ ] Implement monitoring and logging
+   - [ ] Create documentation for maintaining the Ghost instance
+
+10. Optional Enhancements:
+    - [ ] Integrate Ghost with existing tools or services
+    - [ ] Set up CI/CD for theme development
+    - [ ] Explore Ghost APIs for custom integrations
+
+11. Launch and Redirect:
+    - [ ] Announce the migration to readers
+    - [ ] Set up redirects from old blog URLs to new Ghost URLs
+    - [ ] Monitor traffic and user feedback after launch
