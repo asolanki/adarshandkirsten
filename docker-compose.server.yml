@@ -15,6 +15,15 @@ services:
       url: https://adarshandkirsten.com
       NODE_ENV: production
       FORCE_HTTPS: true
+      mail__transport: SMTP
+      mail__options__service: Mailgun
+      mail__options__host: smtp.mailgun.org
+      mail__options__port: 465
+      mail__options__secure: 'true'
+      mail__options__auth__user: ${SMTP_USERNAME}
+      mail__options__auth__pass: ${SMTP_PASSWORD}
+      mail__from: 'Adarsh and Kirsten <noreply@adarshandkirsten.com>'
+      MAX_FILE_SIZE: 50000000  # 50MB in bytes
     volumes:
       - ./content:/var/lib/ghost/content
     depends_on:
