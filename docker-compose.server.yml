@@ -12,7 +12,7 @@ services:
       database__connection__user: root
       database__connection__password: ${DB_PASSWORD}
       database__connection__database: ghost
-      url: https://adarshandkirsten.com/blog
+      url: https://adarshandkirsten.com
       NODE_ENV: production
       FORCE_HTTPS: true
     volumes:
