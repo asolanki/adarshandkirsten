@@ -3,3 +3,4 @@
 **/.env
 /mysql/
 **/*.log
+**/.DS_Store
