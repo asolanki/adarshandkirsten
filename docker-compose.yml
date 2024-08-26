@@ -12,14 +12,11 @@ services:
       database__connection__password: ${DB_PASSWORD}
       database__connection__database: ghost
       # This url value is just an example, and is likely to be different in your case.
-    url: http://localhost:2368
+      url: http://localhost:2368
       # contrary to the default mentioned in the linked documentation, this was set to true instead of false for the container to start properly.
       NODE_ENV: development
     volumes:
       - ./content:/var/lib/ghost/content
-    depends_on:
-      db:
-        condition: service_healthy
 
   db:
     image: mysql:8.0
@@ -28,7 +25,7 @@ services:
       MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
       MYSQL_DATABASE: ghost
     volumes:
-      - ./mysql:/var/lib/mysql
+      - mysql_data:/var/lib/mysql
     healthcheck:
       test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
       interval: 10s
@@ -37,4 +34,4 @@ services:
 
 volumes:
   ghost-content:
-  mysql-data:
+  mysql_data:

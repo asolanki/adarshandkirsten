@@ -1,3 +1,4 @@
 /img/raw/*.MOV
 **/.venv
 **/.env
+/mysql/
